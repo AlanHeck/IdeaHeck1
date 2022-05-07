@@ -1,18 +1,23 @@
+const pesosPorDolar = 205;
+const pesosPorEuro = 210;
+
+const campoMonto = document.getElementById("monto");
+const botonRadioDolar = document.getElementById("cambio-dolar");
+const botonRadioEuro = document.getElementById("cambio-euro");
+
 function convertir () {
-    let valore = parseInt(document.getElementById("valor").value);
+    let montoComoNumero = parseInt(campoMonto.value);
     let resutaldo = 0;
-    let dolar = 205;
-    let euro = 210;
-    if(isNaN(valore)){
+    if(isNaN(montoComoNumero)){
         alert("Debes completar todos los requerimientos")
     }
     else{
-        if(document.getElementById("uno").checked){
-            resutaldo = valore / dolar; 
+        if(botonRadioDolar.checked){
+            resutaldo = montoComoNumero / pesosPorDolar; 
             alert("El cambio de pesos a dolares es: $" + resutaldo.toFixed(2));
         }
-        else if (document.getElementById("dos").checked){
-            resutaldo = valore / euro; 
+        else if (botonRadioEuro.checked){
+            resutaldo = montoComoNumero / pesosPorEuro; 
             alert("El cambio de pesos a euros es: $" + resutaldo.toFixed(2));
         }
         else{
