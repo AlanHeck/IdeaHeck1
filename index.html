@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambio dinero</title>
 </head>
-<h1>Cambie sus Pesos por Dolares o Euros</h1>
-<form class="formulario">
-    <p>Moneda a cambiar</p>
-    <input type="radio" name="cambio" id="cambio-dolar" >  Dolar
-    <input type="radio" name="cambio" id="cambio-euro"> Euro
-    <p>Ingrese monto</p>
-    <input type="number" id="monto" min="1" max="100000000">
-    <input type="button" id="cotizador" value="Cotizar" onclick="convertir()">
-</form>
-
 
 <body>
+    <h1>Cambie sus Pesos por Dolares o Euros</h1>
+    <form class="formulario">
+        <p>Moneda a cambiar</p>
+        <input type="radio" name="cambio" id="cambio-dolar"> Dolar
+        <input type="radio" name="cambio" id="cambio-euro"> Euro
+        <p>Ingrese monto</p>
+        <input type="number" id="monto" min="1" max="100000000">
+        <input type="button" id="cotizador" value="Cotizar" onclick="convertir()">
+    </form>
     <script src="main.js"></script>
 </body>
+
 </html>
